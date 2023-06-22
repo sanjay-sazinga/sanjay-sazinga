@@ -156,7 +156,7 @@ The following output events can be subscribed to when using the reusable compone
    * Object - `{left:MenuItem[],right:{edit:boolean,filterLboolean,custom:MenuItem[]}`[link](#headerContextMenu)
    * Default Value - null
    * Usage -
-      ```json
+      ```
          actionMenu : ActionMenu:{
              left:[
                  {
