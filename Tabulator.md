@@ -31,7 +31,7 @@ Advance component that displays data in table format with capabilities to suppor
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `data` | `Array` | `[]` | [Details](#dataInput) |
-| `columns` | `Array` | `[]` | Details |
+| `columns` | `Array` | `[]` | [Details](#columnInput) |
 | `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
 | `childTableRowContextMenuOptions` | `object` |  `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
 | `primaryTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
@@ -61,6 +61,7 @@ The following output events can be subscribed to when using the reusable compone
  * Required  - No
 
  ## columns
+ <a name="columnInput"/>
  * Description - Table column settings, by default an empty object[].Please note, columns must be the same as a key in data array objects.
  * Required  - No
  * Interface -[Column](#columnLink)
