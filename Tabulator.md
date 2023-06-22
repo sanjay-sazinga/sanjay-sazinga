@@ -60,9 +60,9 @@ The following output events can be subscribed to when using the reusable compone
  * Description - Table data, either an array object
  * Required  - No
 
- ## columns
  <a name="columnInput"/>
  
+ ## columns 
  * Description - Table column settings, by default an empty object[].Please note, columns must be the same as a key in data array objects.
  * Required  - No
  * Interface -[Column](#columnLink)
