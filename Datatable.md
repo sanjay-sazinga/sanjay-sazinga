@@ -7,14 +7,14 @@ Advance component that displays data in table format with capabilities to suppor
 ## Importing the component
 
 ```
-    import { TabulatorComponent } from '../../../shared/components/tabulator/tabulator.component';
+    import { DataTableComponent } from '../../../shared/components/data-table/data-table.component';
 
    -------------------------------------
     @Component({
      .....
      imports:[
       .....,
-      TabulatorComponent
+      DataTableComponent
      ]
  
 ```
@@ -22,8 +22,21 @@ Advance component that displays data in table format with capabilities to suppor
 ## Implementing the component
 
 ```
-    <app-tabulator [data]="data" [columns]="columns" [primaryTableRowContextMenuOptions]="primaryTableRowContextMenuOptions"
-     (saveDataEvent)="saveDataEvent($event)"></app-tabulator>
+    <app-data-table [data]="pagedFiles" [columns]="dataTableColumn"
+        [itemsPerPage]="itemsPerPage" [currentPage]="currentPage"
+        [customCellBackgoundColor]="customCellBackgoundColor"
+        [customCellColor]="customCellColor"
+        [customCellClass]="customCellClass"
+        [actionButtonHideShow]="actionButtonHideShow"
+        [totalItemCounts]="totalItemCounts"
+        [isLoading]="isLoading"
+        [tableConfiguration]="tableConfiguration"
+        (pageChangeClickEvent)="pageChangeClickEvent($event)"
+        (changePageSizeClickEvent)="changePageSizeClickEvent($event)"
+        (cellClickEvent)="cellClickEvent($event)"
+        (actionEvent)="actionEvent($event)"
+        (selectedRowIndexEvent)="selectedRowIndexEvent($event)" >
+    </app-data-table>
 ```
 ## API Reference
 
