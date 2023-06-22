@@ -24,8 +24,8 @@ Advance component that displays data in table format with capabilities to suppor
 | `columns` | `Array` | `null` | Details |
 | `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
 | `childTableRowContextMenuOptions` | `object` |  `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
-| `primaryTableColumnContextMenuOptions` | `object` | `null` | Details |
-| `childTableColumnContextMenuOptions` | `object` | `null` | Details |
+| `primaryTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
+| `childTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
 | `freezeUptoXRows` | `number` | `0` | Details |
 | `freezeUptoXColumns` | `number` | `0` | Details |
 | `groupBy` | `object` | null | Details |
@@ -48,8 +48,7 @@ The following output events can be subscribed to when using the reusable compone
 Property 1 - primaryTableRowContextMenuOptions
 * Description
 * Required  - No
-* Schema -
-* Default Value
+* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`
 * Possible Values
 * Usage - code example
 * Any other details required
