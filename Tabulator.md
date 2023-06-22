@@ -83,7 +83,7 @@ The following output events can be subscribed to when using the reusable compone
  ## primaryTableRowContextMenuOptions
 * Description - This property will used to add options on right click of row
 * Required  - No
-* Object -[rowContextMenuConfig](#rowContextMenuConfig)
+* Interface -[rowContextMenuConfig](#rowContextMenuConfig)
 * Usage - ``
 * Special considerations - 
  
@@ -106,7 +106,7 @@ The following output events can be subscribed to when using the reusable compone
    ## primaryTableColumnContextMenuOptions
    * Description - This property will used to add options on right click of column header
    * Required  - No
-   * Interface -[rowContextMenuConfig](#rowContextMenuConfig)
+   * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
    * Usage - ``
    * Special considerations - 
   <a name="headerContextMenu"></a>
@@ -222,8 +222,8 @@ The following output events can be subscribed to when using the reusable compone
   }
 ```
 
-
-<a name="rowContextMenuConfig"/> 
+##
+<a name="columnContextMenuConfigLink"/> 
 
 ```
 export interface ColumnContextMenuConfig {
