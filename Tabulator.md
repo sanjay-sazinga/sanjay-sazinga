@@ -83,7 +83,7 @@ The following output events can be subscribed to when using the reusable compone
  ## primaryTableRowContextMenuOptions
 * Description - This property will used to add options on right click of row
 * Required  - No
-* Interface -[rowContextMenuConfig](#rowContextMenuConfig)
+* Interface -[RowContextMenuConfig](#rowContextMenuConfig)
 * Usage - ``
 * Special considerations - 
  
@@ -95,7 +95,7 @@ The following output events can be subscribed to when using the reusable compone
  ## childTableRowContextMenuOptions
   * Description - This property will used to child table add options on right click of row
   * Required  - No
-  * Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#childCustomAction)
+  * Interface -[RowContextMenuConfig](#rowContextMenuConfig)
   * Usage - ``
   * Special considerations - 
    <a name="childCustomAction"></a>
@@ -109,7 +109,6 @@ The following output events can be subscribed to when using the reusable compone
    * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
    * Usage - ``
    * Special considerations - 
-  <a name="headerContextMenu"></a>
   | Property | Value | 
   |  --- | --- |
   | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
@@ -117,13 +116,12 @@ The following output events can be subscribed to when using the reusable compone
    ## childTableColumnContextMenuOptions
    * Description - This property will used to child table add options on right click of column header
    * Required  - No
-   * Object -`{edit:boolean,insertLeft:boolean,insterRight:boolean,delete?:boolean,customAction?:object}`[link](#childheaderContextMenu)
+   * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
    * Usage - ``
    * Special considerations - 
-    <a name="childheaderContextMenu"></a>
-    | Property | Value | 
-    |  --- | --- |
-    | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
+   | Property | Value | 
+   |  --- | --- |
+   | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
 
    ## freezeUptoXRows
    * Description - If you set the `frozenRows` table setup option to an integer value then that many rows of data will be frozen at the top of the table.
