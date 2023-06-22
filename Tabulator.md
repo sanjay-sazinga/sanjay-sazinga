@@ -168,6 +168,35 @@ The following output events can be subscribed to when using the reusable compone
 ## Interfaces
 
 * [Reference](https://material.angular.io/components/button/api)
+  
+```
+export interface RowContextMenuConfig {
+  addRowAbove: boolean;
+  addRowBelow: boolean;
+  deleteRow: boolean;
+  customActions?: MenuObject<RowComponent>[];
+}
+```
+
+```
+export interface Column {
+  title: string;
+  field: string;
+  hasTabularData?: boolean;
+  columns?: Column[];
+  editor?: string;
+}
+```
+```
+export interface ColumnContextMenuConfig {
+  edit: boolean;
+  insertLeft: boolean;
+  insertRight: boolean;
+  delete: boolean;
+  customActions?: MenuObject<ColumnComponent>[];
+}
+```
+
 
 ## Constants
 
