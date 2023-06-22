@@ -54,7 +54,39 @@ The following output events can be subscribed to when using the reusable compone
   <a name="customAction"></a>
   | Property | Value | 
   |  --- | --- |
-  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |  
+  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+
+
+ ## childTableRowContextMenuOptions
+* Description - This property will used to child table add options on right click of row
+* Required  - No
+* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
+* Usage - ``
+* Special considerations - 
+  <a name="customAction"></a>
+  | Property | Value | 
+  |  --- | --- |
+  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+
+edit:true,insertLeft:true,insterRight:true,delete:true
+   ## primaryTableColumnContextMenuOptions
+* Description - This property will used to add options on right click of column header
+* Required  - No
+* Object -`{edit:boolean,insertLeft:boolean,insterRight:boolean,delete?:boolean,customAction?:object}`[link](#headerContextMenu)
+* Usage - ``
+* Special considerations - 
+  <a name="headerContextMenu"></a>
+  | Property | Value | 
+  |  --- | --- |
+  | `customAction` |
+   ` [
+    {
+        label:"Hide Column",
+        action:function(e, column){
+            column.hide();
+        }
+    },
+]` |  
 
 ### Outputs
 
