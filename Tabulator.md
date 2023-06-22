@@ -54,6 +54,32 @@ The following output events can be subscribed to when using the reusable compone
 | `saveDataEvent` | `Event` | The output event emitted by the component. |
 
 ### Property Details (Inputs)
+ ## data
+ * Description - Table data, either an array object
+ * Required  - No
+
+ ## columns
+ * Description - Table column settings, by default an empty object[].Please note, columns must be the same as a key in data array objects.
+ * Required  - No
+ * Interface - [Column](#columns)
+ * Usage -
+    ```
+     columns=[
+            {
+            title:"Key",
+            field:"SSOTKey"
+            editor:"input"
+            },
+            {
+            title:"Key",
+            field:"SSOTKey"
+            editor:"input"
+            }
+    ]
+    ```
+  
+
+
  ## primaryTableRowContextMenuOptions
 * Description - This property will used to add options on right click of row
 * Required  - No
@@ -182,7 +208,7 @@ The following output events can be subscribed to when using the reusable compone
  ```
  *  `MenuObject<RowComponent>[]` - [Reference](https://tabulator.info/docs/5.5/menu#overview-generator)
 ##
-<a name="rowContextMenuConfig"/> 
+<a name="columns"/> 
 
 ```
   export interface Column {
