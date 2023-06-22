@@ -44,7 +44,8 @@ The following output events can be subscribed to when using the reusable compone
 | --- | --- | --- |
 | `saveDataEvent` | `Event` | The output event emitted by the component. |
 
-Property 1 - primaryTableRowContextMenuOptions
+### Property Details
+ ### primaryTableRowContextMenuOptions
 * Description - This property will used to add options on right click of row
 * Required  - No
 * Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
