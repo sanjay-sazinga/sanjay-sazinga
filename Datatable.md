@@ -46,17 +46,16 @@
 | --- | --- | --- | --- |
 | `data` | `Array` | `[]` | [Details](#dataInput) |
 | `columns` | `Array` | `[]` | [Details](#columnInput) |
-| `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
-| `childTableRowContextMenuOptions` | `object` |  `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
-| `primaryTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
-| `childTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
-| `freezeUptoXRows` | `number` | `0` | Details |
-| `freezeUptoXColumns` | `number` | `0` | Details |
+| `tableConfiguration` | `object` | `{}` | Details |
+| `totalItemCounts` | `number` | `0` | Details |
+| `currentPage` | `number` | `1` | Details |
+| `itemsPerPage` | `number` | `10` | Details |
 | `groupBy` | `string[]` | null | Details |
-| `movableRows` | `boolean` | false | Details |
-| `movableColumns` | `boolean` | false | Details |
-| `actionMenu` | `object` | null | Details |
-| `childDocumentId` | `string ` | null | Details |
+| `isLoading` | `boolean` | false | Details |
+| `customCellBackgoundColor` | `Event` | null | Details |
+| `customCellColor` | `Event` | null | Details |
+| `customCellClass` | `Event` | null | Details |
+| `actionButtonHideShow` | `Event` | null | Details |
 
 
 ### Outputs
