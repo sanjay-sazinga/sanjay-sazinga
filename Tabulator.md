@@ -208,6 +208,7 @@ The following output events can be subscribed to when using the reusable compone
  ```
  *  `MenuObject<RowComponent>[]` - [Reference](https://tabulator.info/docs/5.5/menu#overview-generator)
 ##
+
 <a name="columns"/> 
 
 ```
