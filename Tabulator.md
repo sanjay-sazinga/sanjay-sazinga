@@ -55,6 +55,7 @@ The following output events can be subscribed to when using the reusable compone
 
 ### Property Details (Inputs)
  <a name="dataInput"/>
+ 
  ## data
  * Description - Table data, either an array object
  * Required  - No
