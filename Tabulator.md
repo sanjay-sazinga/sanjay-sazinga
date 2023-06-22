@@ -89,9 +89,9 @@ The following output events can be subscribed to when using the reusable compone
   * Usage - ``
   * Special considerations - 
    <a name="childCustomAction"></a>
-    | Property | Value | 
-    |  --- | --- |
-    | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+  | Property | Value | 
+  |  --- | --- |
+  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
 
    ## primaryTableColumnContextMenuOptions
    * Description - This property will used to add options on right click of column header
