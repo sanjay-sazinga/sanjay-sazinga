@@ -59,7 +59,7 @@ Property 1 - primaryTableRowContextMenuOptions
                 row.delete();
             }
         },
-    ]`|  
+    ]` |  
 
 ### Outputs
 
