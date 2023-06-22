@@ -47,7 +47,7 @@ The following output events can be subscribed to when using the reusable compone
 Property 1 - primaryTableRowContextMenuOptions
 * Description - This property will used for row right click open menu option 
 * Required  - No
-* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`(#customAction)
+* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
 * Usage - ``
 * Special considerations - 
    <a name="customAction"></a>| Property | Value | 
