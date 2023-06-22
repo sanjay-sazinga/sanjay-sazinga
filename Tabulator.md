@@ -269,14 +269,61 @@ export interface MenuItem {
 
 * Explain all the sub components of tabulator. Give complete API reference for all of them. Refer to API reference structure above.
 
-### Component 1 - tabulator-menu
+### Component 1 - tabulator-table
 
 #### Overview
 
+* 
+
 #### API Reference
 
-.
-.
+### Inputs - For every input property, list the following
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `data` | `Array` | `[]` | [Details](#dataInput) |
+| `columns` | `Array` | `[]` | [Details](#columnInput) |
+| `rowContextMenuOptions` | `object` | `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
+| `columnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
+| `freezeUptoXRows` | `number` | `0` | Details |
+| `freezeUptoXColumns` | `number` | `0` | Details |
+| `groupBy` | `string[]` | null | Details |
+| `movableRows` | `boolean` | true | Details |
+| `movableColumns` | `boolean` | true | Details |
+| `displayFilterInputs` | `boolean` | false | Details |
+| `isEditMode` | `boolean` | false | Details |
+| `level` | `number` | null | Details |
+
+
+### Outputs
+
+The following output events can be subscribed to when using the reusable component:
+
+| Event | Payload Type | Description |
+| --- | --- | --- |
+| `tableTypeDoubleClickEvent` | `Event` | The output event emitted by the component. |
+
+### Property Details (Inputs)
+
+   ## displayFilterInputs
+   * Description - Tabulator allows you to filter the table data by any field in the data set.
+   * Required  - No
+   * Default Value - false
+
+   ## isEditMode
+   * Description - Tabulator allow to edit cell value
+   * Default Value - false
+
+   ## level 
+   * Description - Tabulator number of instance created level
+   * Required  - No
+
+## Outputs 
+
+  ## tableTypeDoubleClickEvent
+  * Description - The output event emitted by the component. With table type it can open another tabulator instance as a new tab.
+    
+  
 
 ### Component 2
 
