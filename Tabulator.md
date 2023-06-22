@@ -1,3 +1,20 @@
+export interface ActionMenu {
+  left: MenuItem[];
+  right: {
+    edit: boolean;
+    filter: boolean;
+    custom?: MenuItem[];
+  };
+}
+
+export interface MenuItem {
+  label: string;
+  items?: MenuItem[];
+  icon?: string;
+  disabled?: boolean;
+  action?: () => void;
+}
+
 ## Overview
 
 Advance component that displays data in table format with capabilities to support to entity, block, image, table types. With table type it can open another tabulator instance as a new tab.
