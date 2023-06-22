@@ -20,8 +20,8 @@ Advance component that displays data in table format with capabilities to suppor
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| `data` | object[]` | `null` | Details |
-| `columns` | `object[]` | `null` | Details |
+| `data` | `Array` | `null` | Details |
+| `columns` | `Array` | `null` | Details |
 | `primaryTableRowContextMenuOptions` | `object` | `null` | Details |
 | `childTableRowContextMenuOptions` | `object` | `null` | Details |
 | `primaryTableColumnContextMenuOptions` | `object` | `null` | Details |
