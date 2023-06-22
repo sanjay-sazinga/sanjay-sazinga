@@ -76,7 +76,7 @@ The following output events can be subscribed to when using the reusable compone
 * Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
 * Usage - ``
 * Special considerations - 
-  <a name="customAction"></a>
+ 
   | Property | Value | 
   |  --- | --- |
   | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
@@ -185,7 +185,8 @@ The following output events can be subscribed to when using the reusable compone
 ## Interfaces
 
 * [Reference](https://material.angular.io/components/button/api)
-  
+
+ <a name="customAction"/> 
 ```
 export interface RowContextMenuConfig {
   addRowAbove: boolean;
