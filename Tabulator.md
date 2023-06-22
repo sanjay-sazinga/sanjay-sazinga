@@ -54,7 +54,8 @@ The following output events can be subscribed to when using the reusable compone
 | `saveDataEvent` | `Event` | The output event emitted by the component. |
 
 ### Property Details (Inputs)
- ## data <a name="dataInput"/>
+ <a name="dataInput"/>
+ ## data
  * Description - Table data, either an array object
  * Required  - No
 
