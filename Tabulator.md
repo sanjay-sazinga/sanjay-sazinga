@@ -339,13 +339,26 @@ The following output events can be subscribed to when using the reusable compone
     
   
 
-### Component 2
+### Component 2 - tabulator-menu
 
-#### Overview
+#### Overview 
+  Tabulator menu component custom menu option configure  
 
+## Implementing the component
+```
+    <app-tabulator-menu [leftMenu]="leftMenu" [rightMenu]="rightMenu">
+    </app-tabulator-menu>
+```
 #### API Reference
+ 
+ ### Inputs - For every input property, list the following
 
-..
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `leftMenu` | `Array` | `[]` | [Details] |
+| `rightMenu` | `Array` | `[]` | [Details] |
+
+
 
 ### Component 3
 
