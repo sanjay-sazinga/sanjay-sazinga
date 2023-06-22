@@ -1,19 +1,3 @@
-export interface ActionMenu {
-  left: MenuItem[];
-  right: {
-    edit: boolean;
-    filter: boolean;
-    custom?: MenuItem[];
-  };
-}
-
-export interface MenuItem {
-  label: string;
-  items?: MenuItem[];
-  icon?: string;
-  disabled?: boolean;
-  action?: () => void;
-}
 
 ## Overview
 
@@ -185,7 +169,7 @@ The following output events can be subscribed to when using the reusable compone
 ## Interfaces
 
 * [Reference](https://material.angular.io/components/button/api)
-
+##
 <a name="rowContextMenuConfig"/> 
 
  ```
@@ -196,16 +180,23 @@ The following output events can be subscribed to when using the reusable compone
     customActions?: MenuObject<RowComponent>[];
   }
  ```
+  RowComponent - [Reference](https://tabulator.info/docs/5.5/components#component-row)
+##
+<a name="rowContextMenuConfig"/> 
 
 ```
-export interface Column {
-  title: string;
-  field: string;
-  hasTabularData?: boolean;
-  columns?: Column[];
-  editor?: string;
-}
+  export interface Column {
+    title: string;
+    field: string;
+    hasTabularData?: boolean;
+    columns?: Column[];
+    editor?: string;
+  }
 ```
+
+
+<a name="rowContextMenuConfig"/> 
+
 ```
 export interface ColumnContextMenuConfig {
   edit: boolean;
@@ -213,6 +204,30 @@ export interface ColumnContextMenuConfig {
   insertRight: boolean;
   delete: boolean;
   customActions?: MenuObject<ColumnComponent>[];
+}
+```
+
+<a name="rowContextMenuConfig"/> 
+
+```
+export interface ActionMenu {
+  left: MenuItem[];
+  right: {
+    edit: boolean;
+    filter: boolean;
+    custom?: MenuItem[];
+  };
+}
+```
+<a name="rowContextMenuConfig"/> 
+
+```
+export interface MenuItem {
+  label: string;
+  items?: MenuItem[];
+  icon?: string;
+  disabled?: boolean;
+  action?: () => void;
 }
 ```
 
