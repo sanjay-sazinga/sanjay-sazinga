@@ -47,10 +47,10 @@ The following output events can be subscribed to when using the reusable compone
 Property 1 - primaryTableRowContextMenuOptions
 * Description - This property will used for row right click open menu option 
 * Required  - No
-* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`
+* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:[object](#customAction)}`
 * Usage - ``
 * Special considerations - 
-  | Property | Value | 
+   <a name="customAction"></a>| Property | Value | 
   |  --- | --- |
   | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |  
 
