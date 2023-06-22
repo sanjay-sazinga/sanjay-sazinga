@@ -273,7 +273,21 @@ export interface MenuItem {
 
 #### Overview
 
-* 
+## Implementing the component
+```
+    <app-tabulator-table [columns]="columns" [data]="data"
+    [rowContextMenuOptions]="primaryTableRowContextMenuOptions"
+    [columnContextMenuOptions]="primaryTableColumnContextMenuOptions"
+    [freezeUptoXRows]="freezeUptoXRows"
+    [freezeUptoXColumns]="freezeUptoXColumns"
+    [groupBy]="groupBy"
+    [movableColumns]="movableColumns"
+    [movableRows]="movableRows"
+    [displayFilterInputs]="enableFilter"
+    [isEditMode]="isEditMode" [level]="level"
+    (tableTypeDoubleClickEvent)="handleTableTypeClickEvent($event)" >
+    </app-tabulator-table>
+```
 
 #### API Reference
 
