@@ -50,7 +50,6 @@
 | `totalItemCounts` | `number` | `0` | Details |
 | `currentPage` | `number` | `1` | Details |
 | `itemsPerPage` | `number` | `10` | Details |
-| `groupBy` | `string[]` | null | Details |
 | `isLoading` | `boolean` | false | Details |
 | `customCellBackgoundColor` | `Event` | null | Details |
 | `customCellColor` | `Event` | null | Details |
