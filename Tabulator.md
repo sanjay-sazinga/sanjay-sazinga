@@ -23,7 +23,7 @@ Advance component that displays data in table format with capabilities to suppor
 | `data` | `Array` | `null` | Details |
 | `columns` | `Array` | `null` | Details |
 | `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
-| `childTableRowContextMenuOptions` | `object` | `null` | Details |
+| `childTableRowContextMenuOptions` | `object` |  `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
 | `primaryTableColumnContextMenuOptions` | `object` | `null` | Details |
 | `childTableColumnContextMenuOptions` | `object` | `null` | Details |
 | `freezeUptoXRows` | `number` | `0` | Details |
