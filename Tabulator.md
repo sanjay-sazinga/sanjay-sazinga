@@ -50,7 +50,8 @@ Property 1 - primaryTableRowContextMenuOptions
 * Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
 * Usage - ``
 * Special considerations - 
-   <a name="customAction"></a>| Property | Value | 
+  <a name="customAction"></a>
+  | Property | Value | 
   |  --- | --- |
   | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |  
 
