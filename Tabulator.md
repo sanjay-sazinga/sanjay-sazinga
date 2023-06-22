@@ -52,7 +52,7 @@ Property 1 - primaryTableRowContextMenuOptions
 * Special considerations - 
   | Property | Value | 
   |  --- | --- |
-  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}},    ]` |  
+  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |  
 
 ### Outputs
 
