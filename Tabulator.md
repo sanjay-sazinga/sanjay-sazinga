@@ -45,13 +45,21 @@ The following output events can be subscribed to when using the reusable compone
 | `saveDataEvent` | `Event` | The output event emitted by the component. |
 
 Property 1 - primaryTableRowContextMenuOptions
-* Description
+* Description - This property will used for row right click open menu option 
 * Required  - No
 * Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`
-* Possible Values
-* Usage - code example
-* Any other details required
-* Special considerations (if any)
+* Usage - ``
+* Special considerations - 
+  | Property | Value | 
+  |  --- | --- |
+  | `customAction` | `[
+        {
+            label:"Delete Row",
+            action:function(e, row){
+                row.delete();
+            }
+        },
+    ]`|  
 
 ### Outputs
 
