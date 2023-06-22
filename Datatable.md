@@ -2,7 +2,7 @@
 
 ## Overview
 
-Advance component that displays data in table format with capabilities to support to entity, block, image, table types. With table type it can open another tabulator instance as a new tab.
+ create a generic table component that can be used for displaying documents listing, users, clients, roles table, etc
 
 ## Importing the component
 
