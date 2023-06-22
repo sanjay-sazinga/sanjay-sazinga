@@ -78,14 +78,7 @@ edit:true,insertLeft:true,insterRight:true,delete:true
   <a name="headerContextMenu"></a>
   | Property | Value | 
   |  --- | --- |
-  | `customAction` | `<br>
-  [{<br>
-        label:"Hide Column",<br>
-        action:function(e, column){<br>
-            column.hide();<br>
-        }<br>
-    },<br>
-]`<br> |  
+  | `customAction` | `[{<br>label:"Hide Column",<br> action:function(e, column){<br>column.hide();<br> }<br>}<br>]`|  
 
 ### Outputs
 
