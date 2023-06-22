@@ -73,7 +73,7 @@ The following output events can be subscribed to when using the reusable compone
  ## primaryTableRowContextMenuOptions
 * Description - This property will used to add options on right click of row
 * Required  - No
-* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
+* Object -[rowContextMenuConfig](#rowContextMenuConfig)
 * Usage - ``
 * Special considerations - 
  
@@ -187,14 +187,15 @@ The following output events can be subscribed to when using the reusable compone
 * [Reference](https://material.angular.io/components/button/api)
 
 <a name="rowContextMenuConfig"/> 
-```
-export interface RowContextMenuConfig {
-  addRowAbove: boolean;
-  addRowBelow: boolean;
-  deleteRow: boolean;
-  customActions?: MenuObject<RowComponent>[];
-}
-```
+
+ ```
+  export interface RowContextMenuConfig {
+    addRowAbove: boolean;
+    addRowBelow: boolean;
+    deleteRow: boolean;
+    customActions?: MenuObject<RowComponent>[];
+  }
+ ```
 
 ```
 export interface Column {
