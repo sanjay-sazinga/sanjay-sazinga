@@ -20,6 +20,8 @@ Advance component that displays data in table format with capabilities to suppor
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
+| `data` | object[]` | `null` | Details |
+| `columns` | `object[]` | `null` | Details |
 | `primaryTableRowContextMenuOptions` | `object` | `null` | Details |
 | `childTableRowContextMenuOptions` | `object` | `null` | Details |
 | `primaryTableColumnContextMenuOptions` | `object` | `null` | Details |
@@ -27,8 +29,11 @@ Advance component that displays data in table format with capabilities to suppor
 | `freezeUptoXRows` | `number` | `0` | Details |
 | `freezeUptoXColumns` | `number` | `0` | Details |
 | `groupBy` | `object` | null | Details |
-| `movableRows` | `object` | null | Details |
-| `movableColumns` | `object` | null | Details |
+| `movableRows` | `boolean` | false | Details |
+| `movableColumns` | `boolean` | false | Details |
+| `actionMenu` | `object` | null | Details |
+| `childDocumentId` | `string ` | null | Details |
+
 
 
 
