@@ -30,7 +30,7 @@ Advance component that displays data in table format with capabilities to suppor
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| `data` | `Array` | `[]` | Details |
+| `data` | `Array` | `[]` | [Details](#dataInput) |
 | `columns` | `Array` | `[]` | Details |
 | `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
 | `childTableRowContextMenuOptions` | `object` |  `{addRowAbove:true,addRowBelow:true,deleteRow:true}` | Details |
@@ -54,7 +54,7 @@ The following output events can be subscribed to when using the reusable compone
 | `saveDataEvent` | `Event` | The output event emitted by the component. |
 
 ### Property Details (Inputs)
- ## data
+ ## data <a name="dataInput"/>
  * Description - Table data, either an array object
  * Required  - No
 
