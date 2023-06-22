@@ -180,7 +180,7 @@ The following output events can be subscribed to when using the reusable compone
     customActions?: MenuObject<RowComponent>[];
   }
  ```
-  RowComponent - [Reference](https://tabulator.info/docs/5.5/components#component-row)
+ * RowComponent - [Reference](https://tabulator.info/docs/5.5/menu#overview-generator)
 ##
 <a name="rowContextMenuConfig"/> 
 
