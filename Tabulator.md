@@ -11,7 +11,7 @@ Advance component that displays data in table format with capabilities to suppor
 ## Implementing the component
 
 ```
-    <app-reusable-component [inputProperty]="value" (outputEvent)="handleEvent($event)"></app-reusable-component>
+    <app-tabulator [inputProperty]="value" (outputEvent)="handleEvent($event)"></app-tabulator>
 ```
 
 ## API Reference
