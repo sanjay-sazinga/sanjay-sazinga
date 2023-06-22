@@ -13,7 +13,6 @@ Advance component that displays data in table format with capabilities to suppor
 ```
     <app-tabulator [inputProperty]="value" (outputEvent)="handleEvent($event)"></app-tabulator>
 ```
-and we can even [link](#head1234) to it so:
 ## API Reference
 
 ### Inputs - For every input property, list the following
@@ -38,7 +37,7 @@ and we can even [link](#head1234) to it so:
 
 
 ### Outputs
-### <a name="head1234"></a>A Heading in this SO entry!
+
 The following output events can be subscribed to when using the reusable component:
 
 | Event | Payload Type | Description |
