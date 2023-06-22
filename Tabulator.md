@@ -86,10 +86,9 @@ The following output events can be subscribed to when using the reusable compone
 * Interface -[RowContextMenuConfig](#rowContextMenuConfig)
 * Usage - ``
 * Special considerations - 
- 
-  | Property | Value | 
-  |  --- | --- |
-  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+    | Property | Value | 
+    |  --- | --- |
+    | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
 
 
  ## childTableRowContextMenuOptions
@@ -98,10 +97,9 @@ The following output events can be subscribed to when using the reusable compone
   * Interface -[RowContextMenuConfig](#rowContextMenuConfig)
   * Usage - ``
   * Special considerations - 
-   <a name="childCustomAction"></a>
-  | Property | Value | 
-  |  --- | --- |
-  | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+      | Property | Value | 
+      |  --- | --- |
+      | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
 
    ## primaryTableColumnContextMenuOptions
    * Description - This property will used to add options on right click of column header
@@ -109,9 +107,9 @@ The following output events can be subscribed to when using the reusable compone
    * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
    * Usage - ``
    * Special considerations - 
-  | Property | Value | 
-  |  --- | --- |
-  | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
+       | Property | Value | 
+       |  --- | --- |
+       | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
 
    ## childTableColumnContextMenuOptions
    * Description - This property will used to child table add options on right click of column header
@@ -119,9 +117,9 @@ The following output events can be subscribed to when using the reusable compone
    * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
    * Usage - ``
    * Special considerations - 
-   | Property | Value | 
-   |  --- | --- |
-   | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
+       | Property | Value | 
+       |  --- | --- |
+       | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
 
    ## freezeUptoXRows
    * Description - If you set the `frozenRows` table setup option to an integer value then that many rows of data will be frozen at the top of the table.
@@ -175,7 +173,8 @@ The following output events can be subscribed to when using the reusable compone
       
       ```
 
-    ## childDocumentId
+
+## childDocumentId
     * Description - This property will used to child table data save 
     * Required  - No
     * Default Value - ''
