@@ -96,7 +96,7 @@ The following output events can be subscribed to when using the reusable compone
    ## primaryTableColumnContextMenuOptions
    * Description - This property will used to add options on right click of column header
    * Required  - No
-   * Object -`{edit:boolean,insertLeft:boolean,insterRight:boolean,delete?:boolean,customAction?:object}`[link](#headerContextMenu)
+   * Interface -[rowContextMenuConfig](#rowContextMenuConfig)
    * Usage - ``
    * Special considerations - 
   <a name="headerContextMenu"></a>
@@ -186,7 +186,7 @@ The following output events can be subscribed to when using the reusable compone
 
 * [Reference](https://material.angular.io/components/button/api)
 
- <a name="customAction"/> 
+<a name="rowContextMenuConfig"/> 
 ```
 export interface RowContextMenuConfig {
   addRowAbove: boolean;
