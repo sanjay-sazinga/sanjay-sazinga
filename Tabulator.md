@@ -27,7 +27,7 @@ Advance component that displays data in table format with capabilities to suppor
 | `childTableColumnContextMenuOptions` | `object` | `{edit:true,insertLeft:true,insterRight:true,delete:true}` | Details |
 | `freezeUptoXRows` | `number` | `0` | Details |
 | `freezeUptoXColumns` | `number` | `0` | Details |
-| `groupBy` | `object` | null | Details |
+| `groupBy` | `string[]` | null | Details |
 | `movableRows` | `boolean` | false | Details |
 | `movableColumns` | `boolean` | false | Details |
 | `actionMenu` | `object` | null | Details |
@@ -60,15 +60,14 @@ The following output events can be subscribed to when using the reusable compone
  ## childTableRowContextMenuOptions
 * Description - This property will used to child table add options on right click of row
 * Required  - No
-* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#customAction)
+* Object -`{addRowAbove:boolean,addRowBelow:boolean,deleteRow:boolean,customAction?:object}`[link](#childCustomAction)
 * Usage - ``
 * Special considerations - 
-  <a name="customAction"></a>
+  <a name="childCustomAction"></a>
   | Property | Value | 
   |  --- | --- |
   | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
 
-edit:true,insertLeft:true,insterRight:true,delete:true
    ## primaryTableColumnContextMenuOptions
 * Description - This property will used to add options on right click of column header
 * Required  - No
@@ -78,8 +77,45 @@ edit:true,insertLeft:true,insterRight:true,delete:true
   <a name="headerContextMenu"></a>
   | Property | Value | 
   |  --- | --- |
-  | `customAction` | `[{<br>label:"Hide Column",<br> action:function(e, column){<br>column.hide();<br> }<br>}<br>]`|  
+  | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
 
+   ## childTableColumnContextMenuOptions
+* Description - This property will used to child table add options on right click of column header
+* Required  - No
+* Object -`{edit:boolean,insertLeft:boolean,insterRight:boolean,delete?:boolean,customAction?:object}`[link](#childheaderContextMenu)
+* Usage - ``
+* Special considerations - 
+  <a name="childheaderContextMenu"></a>
+  | Property | Value | 
+  |  --- | --- |
+  | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
+
+   ## freezeUptoXRows
+   * Description - If you set the `frozenRows` table setup option to an integer value then that many rows of data will be frozen at the top of the table.
+   * Required  - No
+   * Default Value - `0`
+   * Possible Values  - Interger numbers
+     
+   ## freezeUptoXColumns
+   * Description - You can freeze the position of columns on the left and right of the table using the frozen property.
+   * Required  - No
+   * Default Value - `0`
+   * Possible Values  - Interger numbers
+
+   ## groupBy
+   * Description  -Rows can be grouped by a common field value by setting the groupBy option to the name of the field to be grouped.
+   * Required  - No
+   * Default Value - '' 
+   * Possible Values  - Field name
+
+   ## movableRows
+    * Description - If you would prefer the user only be able to move a column around by one particular cell, the you can set the rowHandle property to true in 
+                   the column definition object for that column to restrict the trigger for row movement to that cell only.
+    * Required  - No
+    * Default Value - false
+    * Possible Values  - true/false
+  
+    
 ### Outputs
 
 * Explain all the output properties/emitted events in detail.
