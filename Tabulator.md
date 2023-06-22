@@ -22,7 +22,7 @@ Advance component that displays data in table format with capabilities to suppor
 | --- | --- | --- | --- |
 | `data` | `Array` | `null` | Details |
 | `columns` | `Array` | `null` | Details |
-| `primaryTableRowContextMenuOptions` | `object` | `null` | Details |
+| `primaryTableRowContextMenuOptions` | `object` | `{addRowAbove:false,addRowBelow:false,deleteRow:false}` | Details |
 | `childTableRowContextMenuOptions` | `object` | `null` | Details |
 | `primaryTableColumnContextMenuOptions` | `object` | `null` | Details |
 | `childTableColumnContextMenuOptions` | `object` | `null` | Details |
@@ -43,13 +43,12 @@ The following output events can be subscribed to when using the reusable compone
 
 | Event | Payload Type | Description |
 | --- | --- | --- |
-| `outputEvent` | `Event` | The output event emitted by the component. |
+| `saveDataEvent` | `Event` | The output event emitted by the component. |
 
-Property 1 - rowContextMenuOptions
-
+Property 1 - primaryTableRowContextMenuOptions
 * Description
-* Required yes/no
-* Schema - Configurability? If menu item is configurable, explain it
+* Required  - No
+* Schema -
 * Default Value
 * Possible Values
 * Usage - code example
