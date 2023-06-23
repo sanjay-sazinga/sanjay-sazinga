@@ -129,6 +129,29 @@ The following output events can be subscribed to when using the reusable compone
   ];
     ```
   
+  ## totalItemCounts
+   * Description - This property will used to table number of records 
+   * Required  - No
+   * Default Value - `0`
+   * Possible Values  - Interger number
+
+ ## currentPage
+   * Description - This property will used to pagination active page 
+   * Required  - No
+   * Default Value - `1`
+   * Possible Values  - `Interger number`
+
+ ## itemsPerPage
+   * Description -  This property will used to how much records on display on table 
+   * Required  - No
+   * Default Value - `10`
+   * Possible Values  - `Interger number`
+
+   ## isLoading
+   * Description - This property will used to loader 
+   * Required  - No
+   * Default Value - `false`
+   * Possible Values  - `true/false`
 
 
  ## tableConfiguration
@@ -137,39 +160,87 @@ The following output events can be subscribed to when using the reusable compone
 * Interface -[TableConfiguration](#tableConfiguration)
 * Usage -
    ```
-     tableConfiguration: TableConfiguration = {
-        rowActions: [
-          {
-            icon: 'fas fa-eye',
-            action: ActionEnum.view,
-            tooltip: 'documents.redigitize file',
-            permission: this.appPermissions.VIEW_DOCUMENTS,
-          },
-          .....
-        ],
-        tableActions: [
-          {
-            label: 'DELETE FILES',
-            icon: 'fas fa-ban',
-            disabled: true,
-            class: 'btn deletebutton',
-            permission: this.appPermissions.DELETE_DOCUMENTS,
-            action: () =>
-              this.confirmAndDeleteMultipleFiles(this.selectedFileIndexes),
-          },
-        ],
-      selectable: true, //show checkbox on table
-      pagination: true,
-      borders: {
-        bottom: true,
-        top: true,
-      },
-      searching: false, ///filter textbox  display
-  };
+    tableConfiguration: TableConfiguration = {
+             rowActions: [
+               {
+                 icon: 'fas fa-eye',
+                 action: ActionEnum.view,
+                 tooltip: 'documents.redigitize file',
+                 permission: this.appPermissions.VIEW_DOCUMENTS,
+               },
+               .....
+             ],
+             tableActions: [
+               {
+                 label: 'DELETE FILES',
+                 icon: 'fas fa-ban',
+                 disabled: true,
+                 class: 'btn deletebutton',
+                 permission: this.appPermissions.DELETE_DOCUMENTS,
+                 action: () =>
+                   this.confirmAndDeleteMultipleFiles(this.selectedFileIndexes),
+               },
+             ],
+           selectable: true, //show checkbox on table
+           pagination: true,
+           borders: {
+             bottom: true,
+             top: true,
+           },
+           searching: false, ///filter textbox  display
+       };
    ```
 
+### Callback Input functions 
+ 
+## customCellBackgoundColor
+* Description -   This property will used to apply cell backgound color as per condition  
+* Required  - No
+* Usage -
+```
+customCellBackgoundColor = (file: ColumnStyle): void => {
+const column = file?.column;
+if (column == 'Status') {
+const statusData = this.allDocumentStatuses[file?.data?.Status];
+if (statusData) {
+ return statusData.background;
+}
+}
+.....
+};
+```
 
+## customCellColor
+* Description -   This property will used to apply cell text color  as per condition  
+* Required  - No
+* Usage -
+ ```
+  customCellColor = (file: ColumnStyle): void => {
+   const column = file?.column;
+   if (column == 'Status') {
+     const statusData = this.allDocumentStatuses[file?.data?.Status];
+     if (statusData) {
+       return statusData.color;
+     }
+   }
+   .....
+  };
+```
 
+## customCellClass
+* Description -   This property will used to apply cell class as per condition  
+* Required  - No
+* Usage -
+ ```
+   customCellClass = (file: ColumnStyle) => {
+   const column = file?.column;
+   if (column == 'DocumentName') {
+     return file?.data?.isDeleted ? 'deletedFiles' : 'cell-click';
+    }
+     ....
+   };
+  
+```
  
        
     
