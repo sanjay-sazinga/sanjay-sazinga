@@ -512,3 +512,22 @@ export interface MenuItem {
 }
 ```
 
+
+### Component 2 - data-table-menu
+
+#### Overview 
+  Table menu component custom menu option buttons  
+
+## Implementing the component
+```
+    <app-data-table-menu [menus]="tableActionMenu" />
+```
+#### API Reference
+ 
+ ### Inputs - For every input property, list the following
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `menus` | `Array` | `[]` | [Details] |
+
+
