@@ -236,12 +236,12 @@ if (statusData) {
 * Usage -
  ```
    customCellClass = (file: ColumnStyle) => {
-   const column = file?.column;
-   if (column == 'DocumentName') {
-     return file?.data?.isDeleted ? 'deletedFiles' : 'cell-click';
-    }
-     ....
-   };
+     const column = file?.column;
+     if (column == 'DocumentName') {
+       return file?.data?.isDeleted ? 'deletedFiles' : 'cell-click';
+      }
+       ....
+     };
   
 ```
 
@@ -251,50 +251,51 @@ if (statusData) {
 * Return Value  - true/false
 * Usage -
  ```
-    onActionButtonHideShow = (args: ActionConditionEvent) => {
-         switch (args?.action) {
-          case ActionEnum.view:
-            return (
-              args.data.Status != 'Digitization Failed' &&
-              args.data.Status != 'In Process' &&
-              args.data.Status != 'In Queue' &&
-              args.data.Status != 'New'
-            );
-          case ActionEnum.delete:
-            return (
-              this.userService.checkValidComponent('delete-documents') &&
-              !args.data.isDeleted
-            );
-          case ActionEnum.restore:
-            return (
-              this.userService.checkValidComponent('restore-documents') &&
-              args.data.isDeleted
-            );
-          case ActionEnum.forcedelete:
-            return (
-              this.userService.checkValidComponent('delete-documents') &&
-              args.data.isDeleted
-            );
-          case ActionEnum.download:
-            return (
-              this.userService.checkValidComponent('download-digitized') &&
-              args.data.Status !== 'New' &&
-              args.data.Status !== 'In Queue' &&
-              args.data.Status !== 'Digitization Failed' &&
-              args.data.Status !== 'In Process'
-            );
-          default:
-            return true;
-         }
-    };
+      onActionButtonHideShow = (args: ActionConditionEvent) => {
+           switch (args?.action) {
+              case ActionEnum.view:
+                return (
+                  args.data.Status != 'Digitization Failed' &&
+                  args.data.Status != 'In Process' &&
+                  args.data.Status != 'In Queue' &&
+                  args.data.Status != 'New'
+                );
+              case ActionEnum.delete:
+                return (
+                  this.userService.checkValidComponent('delete-documents') &&
+                  !args.data.isDeleted
+                );
+              case ActionEnum.restore:
+                return (
+                  this.userService.checkValidComponent('restore-documents') &&
+                  args.data.isDeleted
+                );
+              case ActionEnum.forcedelete:
+                return (
+                  this.userService.checkValidComponent('delete-documents') &&
+                  args.data.isDeleted
+                );
+              case ActionEnum.download:
+                return (
+                  this.userService.checkValidComponent('download-digitized') &&
+                  args.data.Status !== 'New' &&
+                  args.data.Status !== 'In Queue' &&
+                  args.data.Status !== 'Digitization Failed' &&
+                  args.data.Status !== 'In Process'
+                );
+              default:
+                return true;
+             }
+        };
   
-```
+  ```
  
        
     
   
     
 ### Outputs
+ 
  ## cellClickEvent
  * Description -  This output function will used to use table cell click action in column `clickable:true` then only cell click event 
  * Required  - No
@@ -311,6 +312,84 @@ if (statusData) {
       }
    }
  ```
+
+ ## pageChangeClickEvent
+  * Description -  This output function will used to use table page change 
+  * Required  - No // if you need API call do Yes
+  * Usage -
+  ```
+    pageChangeClickEvent(page:number) {
+       try {
+        // page 
+       } catch {       
+       }
+    }
+  ```
+
+ ## changePageSizeClickEvent
+  * Description -  This output function will used to use table page size 
+  * Required  - No // if you need API call do Yes
+  * Usage -
+  ```
+    changePageSizeClickEvent(pageSize:number) {
+       try {
+        // pageSize 
+       } catch {       
+       }
+    }
+  ```
+
+  ## selectedRowIndexEvent
+  * Description -  This output function will used to use table selecting multiple rows
+  * Required  - No // if you need selected data the YES
+  * Usage -
+  ```
+     selectedRowIndexEvent(event: SelectRowItem) {
+       const selectedRowIndexes = event.selectedRowIndexes;
+       const selectedAllRows = event.selectedAllRows;
+       // TODO code
+     }
+  ```
+
+  ## actionEvent
+  * Description -  This output function will used to table row action buttons click evrnt
+  * Required  - No // if you need action then YES
+  * Usage -
+  ```
+   actionEvent(event: TableActionItem) {
+     const data = event.row;
+        switch (event.action) {
+           case ActionEnum.view: {
+             this.viewProcessedDocument(
+               'documents/summary',
+               event.row._id,
+               event.row.DocumentName
+             );
+             break;
+           }       
+        }  
+     }
+  ```
+
+  ## mouseEnterEvent
+  * Description -  This output function will used to table column input `mouseEvent:true` then only mouseEnterEvent
+  * Required  - No
+  * Usage -
+  ```
+    mouseEnterEvent({data,column}) {
+    // TODO
+    }
+  ```
+
+  ## mouseLeaveEvent
+  * Description -  This output function will used to table column input `mouseEvent:true` then only mouseLeaveEvent
+  * Required  - No
+  * Usage -
+  ```
+    mouseLeaveEvent({data,column}) {
+    // TODO
+    }
+  ```
        
        
 
