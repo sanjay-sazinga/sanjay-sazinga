@@ -91,7 +91,7 @@ The following output events can be subscribed to when using the reusable compone
       title: 'Status',
       field: 'Status',
       customStyle: true,
-      className: 'statuschipblock',
+      className: 'status',
     },
     {
       title: 'DocumentName',
@@ -131,104 +131,46 @@ The following output events can be subscribed to when using the reusable compone
   
 
 
- ## primaryTableRowContextMenuOptions
-* Description - This property will used to add options on right click of row
+ ## tableConfiguration
+* Description -  Table configuration rowaction,tableaction etc...
 * Required  - No
-* Interface -[RowContextMenuConfig](#rowContextMenuConfig)
-* Usage - ``
-* Special considerations - 
-    | Property | Value | 
-    |  --- | --- |
-    | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
+* Interface -[TableConfiguration](#tableConfiguration)
+* Usage -
+   ```
+     tableConfiguration: TableConfiguration = {
+        rowActions: [
+          {
+            icon: 'fas fa-eye',
+            action: ActionEnum.view,
+            tooltip: 'documents.redigitize file',
+            permission: this.appPermissions.VIEW_DOCUMENTS,
+          },
+          .....
+        ],
+        tableActions: [
+          {
+            label: 'DELETE FILES',
+            icon: 'fas fa-ban',
+            disabled: true,
+            class: 'btn deletebutton',
+            permission: this.appPermissions.DELETE_DOCUMENTS,
+            action: () =>
+              this.confirmAndDeleteMultipleFiles(this.selectedFileIndexes),
+          },
+        ],
+      selectable: true, //show checkbox on table
+      pagination: true,
+      borders: {
+        bottom: true,
+        top: true,
+      },
+      searching: false, ///filter textbox  display
+  };
+   ```
 
 
- ## childTableRowContextMenuOptions
-  * Description - This property will used to child table add options on right click of row
-  * Required  - No
-  * Interface -[RowContextMenuConfig](#rowContextMenuConfig)
-  * Usage - ``
-  * Special considerations - 
-      | Property | Value | 
-      |  --- | --- |
-      | `customAction` | `[{label:"Custom Row",action:function(e, row){ row.customEvent();}}]` |
 
-   ## primaryTableColumnContextMenuOptions
-   * Description - This property will used to add options on right click of column header
-   * Required  - No
-   * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
-   * Usage - ``
-   * Special considerations - 
-       | Property | Value | 
-       |  --- | --- |
-       | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
-
-   ## childTableColumnContextMenuOptions
-   * Description - This property will used to child table add options on right click of column header
-   * Required  - No
-   * Interface -[ColumnContextMenuConfig](#columnContextMenuConfigLink)
-   * Usage - ``
-   * Special considerations - 
-       | Property | Value | 
-       |  --- | --- |
-       | `customAction` | <pre>[<br>{<br> label:"Hide Column",<br> action:function(e, column){<br> column.hide();<br>  }  <br>}<br>]</pre> |
-
-   ## freezeUptoXRows
-   * Description - If you set the `frozenRows` table setup option to an integer value then that many rows of data will be frozen at the top of the table.
-   * Required  - No
-   * Default Value - `0`
-   * Possible Values  - Interger number
-     
-   ## freezeUptoXColumns
-   * Description - You can freeze the position of columns on the left and right of the table using the frozen property.
-   * Required  - No
-   * Default Value - `0`
-   * Possible Values  - Interger number
-
-   ## groupBy
-   * Description  -Rows can be grouped by a common field value by setting the groupBy option to the name of the field to be grouped.
-   * Required  - No
-   * Default Value - '' 
-   * Possible Values  - Field name
-
-   ## movableRows
-   * Description - If you would prefer the user only be able to move a column around by one particular cell, the you can set the rowHandle property to true in 
-                   the column definition object for that column to restrict the trigger for row movement to that cell only.
-   * Required  - No
-   * Default Value - false
-   * Possible Values  - true/false
  
-   ## actionMenu
-   * Description - This property will used to custom menu left & right side top of the tabulator
-   * Required  - No
-   * Object - `{left:MenuItem[],right:{edit:boolean,filterLboolean,custom:MenuItem[]}`[link](#headerContextMenu)
-   * Default Value - null
-   * Usage -
-      ```
-         actionMenu : ActionMenu:{
-             left:[
-                 {
-                     label:'Menu',
-                     items:[
-                         {
-                              label:'Save',
-                             action:()=>{}
-                         }
-                     ]
-                 }
-             ],
-             right:{
-             edit:true,
-             filter:true,
-             },
-         }
-      
-      ```
-
-
-## childDocumentId
-    * Description - This property will used to child table data save 
-    * Required  - No
-    * Default Value - ''
        
     
   
