@@ -295,9 +295,22 @@ if (statusData) {
   
     
 ### Outputs
- ## saveDataEvent
- * Description - The output event emitted by the component
+ ## cellClickEvent
+ * Description -  This output function will used to use table cell click action in column `clickable:true` then only cell click event 
  * Required  - No
+ * Usage -
+ ```
+   openFile(file: ColumnStyle) {
+      try {
+        const data=file?.data; //In this data property row data
+        const field = file?.column;
+        if (field == 'DocumentName') {
+           // TODO code 
+        }
+      } catch {       
+      }
+   }
+ ```
        
        
 
