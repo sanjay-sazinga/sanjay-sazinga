@@ -85,49 +85,49 @@ The following output events can be subscribed to when using the reusable compone
  * Required  - No
  * Interface - [Column](#columnLink)
  * Usage -
-    ```
-      dataTableColumn: Column[] = [
+```
+    dataTableColumn: Column[] = [
     {
-      title: 'Status',
-      field: 'Status',
-      customStyle: true,
-      className: 'status',
+    title: 'Status',
+    field: 'Status',
+    customStyle: true,
+    className: 'status',
     },
     {
-      title: 'DocumentName',
-      field: 'DocumentName',
-      clickable: true,
-      className: 'document-name',
+    title: 'DocumentName',
+    field: 'DocumentName',
+    clickable: true,
+    className: 'document-name',
     },
     {
-      title: 'Client Name',
-      field: 'ClientName',
-      orderable: false,
+    title: 'Client Name',
+    field: 'ClientName',
+    orderable: false,
     },
     {
-      title: 'Summary',
-      field: 'ChildDocStats',
-      orderable: false,
-      dataType: DataType.array,
-      subColumns: ['key', 'count'],
+    title: 'Summary',
+    field: 'ChildDocStats',
+    orderable: false,
+    dataType: DataType.array,
+    subColumns: ['key', 'count'],
     },
     {
-      title: 'Last Updated',
-      field: [
-        {
-          title: 'LastUpdatedBy',
-          field: 'LastUpdatedBy',
-        },
-        {
-          title: 'LastUpdatedTimestamp',
-          field: 'LastUpdatedTimestamp',
-          pipeType: PipeType.date,
-          pipeFormat: 'short',
-        },
-      ],
+    title: 'Last Updated',
+    field: [
+    {
+     title: 'LastUpdatedBy',
+     field: 'LastUpdatedBy',
     },
-  ];
-    ```
+    {
+     title: 'LastUpdatedTimestamp',
+     field: 'LastUpdatedTimestamp',
+     pipeType: PipeType.date,
+     pipeFormat: 'short',
+    },
+    ],
+    },
+    ];
+```
   
   ## totalItemCounts
    * Description - This property will used to table number of records 
