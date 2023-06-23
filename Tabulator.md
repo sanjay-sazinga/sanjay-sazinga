@@ -359,11 +359,82 @@ The following output events can be subscribed to when using the reusable compone
 | `rightMenu` | `Array` | `[]` | [Details] |
 
 
+### Modal Components
 
-### Component 3
+### Component 1 - modal
 
 #### Overview
-
+   This modal component will used to create column & update column 
+   
 #### API Reference
+ 
+ [Reference](https://material.angular.io/components/dialog/overview)
+ 
+ ### Inputs - For every input property, list the following
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `state` | `string` | `''` | [Details] |
 
-..
+### Outputs
+
+The following output events can be subscribed to when using the reusable component:
+
+| Event | Payload Type | Description |
+| --- | --- | --- |
+| `columnAdded` | `Event` | The output event emitted by the component. |
+
+
+### Component 2 - block-modal
+
+#### Overview
+   This modal component will used to update cell value using textarea
+   
+#### API Reference
+ 
+ [Reference](https://material.angular.io/components/dialog/overview)
+ 
+ ### Inputs - For every input property, list the following
+| Property | Type | Default |
+| --- | --- | --- |
+| `state` | `string` | `''` |
+| `rowData` | `object` | `{}` |
+| `isView` | `boolean` | `''` |
+| `value` | `string` | `''`  |
+
+### Outputs
+
+The following output events can be subscribed to when using the reusable component:
+
+| Event | Payload Type | Description |
+| --- | --- | --- |
+| `editCellValue` | `Event` | The output event emitted by the component. |
+
+
+
+### Component 3 - image-block-modal
+
+#### Overview
+   This modal component will used to update image block 
+   
+#### API Reference
+ 
+ [Reference](https://material.angular.io/components/dialog/overview)
+ 
+ ### Inputs - For every input property, list the following
+| Property | Type | Default |
+| --- | --- | --- |
+| `columnName` | `string` | `''` |
+| `rowData` | `object` | `{}` |
+| `isView` | `boolean` | `''` |
+| `value` | `string` | `''`  |
+
+### Outputs
+
+The following output events can be subscribed to when using the reusable component:
+
+| Event | Payload Type | Description |
+| --- | --- | --- |
+| `deleteCellValue` | `Event` | The output event emitted by the component. |
+
+
+
