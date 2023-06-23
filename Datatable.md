@@ -196,6 +196,7 @@ The following output events can be subscribed to when using the reusable compone
 ## customCellBackgoundColor
 * Description -   This property will used to apply cell backgound color as per condition  
 * Required  - No
+* Return Value  - string only
 * Usage -
 ```
 customCellBackgoundColor = (file: ColumnStyle): void => {
@@ -213,6 +214,7 @@ if (statusData) {
 ## customCellColor
 * Description -   This property will used to apply cell text color  as per condition  
 * Required  - No
+* Return Value  - string only
 * Usage -
  ```
   customCellColor = (file: ColumnStyle): void => {
@@ -230,6 +232,7 @@ if (statusData) {
 ## customCellClass
 * Description -   This property will used to apply cell class as per condition  
 * Required  - No
+* Return Value  - string only
 * Usage -
  ```
    customCellClass = (file: ColumnStyle) => {
@@ -239,6 +242,51 @@ if (statusData) {
     }
      ....
    };
+  
+```
+
+## actionButtonHideShow
+* Description -   This property will used to use table row action column button hide/show
+* Required  - No
+* Return Value  - true/false
+* Usage -
+ ```
+    onActionButtonHideShow = (args: ActionConditionEvent) => {
+         switch (args?.action) {
+          case ActionEnum.view:
+            return (
+              args.data.Status != 'Digitization Failed' &&
+              args.data.Status != 'In Process' &&
+              args.data.Status != 'In Queue' &&
+              args.data.Status != 'New'
+            );
+          case ActionEnum.delete:
+            return (
+              this.userService.checkValidComponent('delete-documents') &&
+              !args.data.isDeleted
+            );
+          case ActionEnum.restore:
+            return (
+              this.userService.checkValidComponent('restore-documents') &&
+              args.data.isDeleted
+            );
+          case ActionEnum.forcedelete:
+            return (
+              this.userService.checkValidComponent('delete-documents') &&
+              args.data.isDeleted
+            );
+          case ActionEnum.download:
+            return (
+              this.userService.checkValidComponent('download-digitized') &&
+              args.data.Status !== 'New' &&
+              args.data.Status !== 'In Queue' &&
+              args.data.Status !== 'Digitization Failed' &&
+              args.data.Status !== 'In Process'
+            );
+          default:
+            return true;
+         }
+    };
   
 ```
  
