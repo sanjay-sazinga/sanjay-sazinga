@@ -531,3 +531,25 @@ export interface MenuItem {
 | `menus` | `Array` | `[]` | [Details] |
 
 
+#### Custom Pipe
+
+## customPipe 
+
+#### Overview 
+  Create a custom pipe for cell value transform ex. date,etc...
+  each and every column will pass pipeType & pipeFomrat, pipeType it used for if condition
+
+  ## Exp
+  ```
+   ....
+   {
+    title: 'LastUpdatedTimestamp',
+    field: 'LastUpdatedTimestamp',
+    pipeType: PipeType.date,
+    pipeFormat: 'short',
+   },
+   ....
+  ```
+
+
+
