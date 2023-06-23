@@ -63,7 +63,13 @@ The following output events can be subscribed to when using the reusable compone
 
 | Event | Payload Type | Description |
 | --- | --- | --- |
-| `saveDataEvent` | `Event` | The output event emitted by the component. |
+| `cellClickEvent` | `Event` | The output event emitted by the component. |
+| `pageChangeClickEvent` | `Event` | The output event emitted by the component. |
+| `changePageSizeClickEvent` | `Event` | The output event emitted by the component. |
+| `selectedRowIndexEvent` | `Event` | The output event emitted by the component. |
+| `mouseEnterEvent` | `Event` | The output event emitted by the component. |
+| `mouseLeaveEvent` | `Event` | The output event emitted by the component. |
+| `actionEvent` | `Event` | The output event emitted by the component. |
 
 ### Property Details (Inputs)
  <a name="dataInput"/>
@@ -77,21 +83,50 @@ The following output events can be subscribed to when using the reusable compone
  ## columns 
  * Description - Table column settings, by default an empty object[].Please note, columns must be the same as a key in data array objects.
  * Required  - No
- * Interface -[Column](#columnLink)
+ * Interface - [Column](#columnLink)
  * Usage -
     ```
-     columns=[
-            {
-            title:"Key",
-            field:"SSOTKey"
-            editor:"input"
-            },
-            {
-            title:"Key",
-            field:"SSOTKey"
-            editor:"input"
-            }
-    ]
+      dataTableColumn: Column[] = [
+    {
+      title: 'Status',
+      field: 'Status',
+      customStyle: true,
+      className: 'statuschipblock',
+    },
+    {
+      title: 'DocumentName',
+      field: 'DocumentName',
+      clickable: true,
+      className: 'document-name',
+    },
+    {
+      title: 'Client Name',
+      field: 'ClientName',
+      orderable: false,
+    },
+    {
+      title: 'Summary',
+      field: 'ChildDocStats',
+      orderable: false,
+      dataType: DataType.array,
+      subColumns: ['key', 'count'],
+    },
+    {
+      title: 'Last Updated',
+      field: [
+        {
+          title: 'LastUpdatedBy',
+          field: 'LastUpdatedBy',
+        },
+        {
+          title: 'LastUpdatedTimestamp',
+          field: 'LastUpdatedTimestamp',
+          pipeType: PipeType.date,
+          pipeFormat: 'short',
+        },
+      ],
+    },
+  ];
     ```
   
 
@@ -207,67 +242,120 @@ The following output events can be subscribed to when using the reusable compone
 
 ## Interfaces
 
-* [Reference](https://material.angular.io/components/button/api)
-##
-<a name="rowContextMenuConfig"/> 
-
- ```
-  export interface RowContextMenuConfig {
-    addRowAbove: boolean;
-    addRowBelow: boolean;
-    deleteRow: boolean;
-    customActions?: MenuObject<RowComponent>[];
-  }
- ```
- *  `MenuObject<RowComponent>[]` - [Reference](https://tabulator.info/docs/5.5/menu#overview-generator)
-##
-
-##
-<a name="columnLink"/> 
+<a name="columnLink" />
 
 ```
-  export interface Column {
-    title: string;
-    field: string;
-    hasTabularData?: boolean;
-    columns?: Column[];
-    editor?: string;
-  }
-```
-
-##
-<a name="columnContextMenuConfigLink"/> 
-
-```
-export interface ColumnContextMenuConfig {
-  edit: boolean;
-  insertLeft: boolean;
-  insertRight: boolean;
-  delete: boolean;
-  customActions?: MenuObject<ColumnComponent>[];
+export interface Column {
+  field: string | Column[];
+  title: string;
+  width?: string;
+  dataType?: DataType;
+  subColumns?: string[]; // if data Type array subColumns need
+  orderable?: boolean;
+  mouseEvent?: boolean;
+  headerClass?: string;
+  customStyle?: boolean;
+  className?: string;
+  clickable?: boolean;
+  pipeType?: PipeType;
+  pipeFormat?: string;
 }
 ```
 
-<a name="rowContextMenuConfig"/> 
+```
+export enum PipeType {
+  date = 'date',
+}
+
+export enum DataType {
+  string = 'string',
+  array = 'array',
+}
+export enum ActionEnum {
+  view = 'view',
+  delete = 'delete',
+  edit = 'edit',
+  save = 'save',
+  refresh = 'refresh',
+  download = 'download',
+  restore = 'restore',
+  forcedelete = 'forcedelete',
+}
 
 ```
-export interface ActionMenu {
-  left: MenuItem[];
-  right: {
-    edit: boolean;
-    filter: boolean;
-    custom?: MenuItem[];
-  };
+
+```
+export interface TableConfiguration {
+  rowActions?: ActionItem[];
+  tableActions?: MenuItem[];
+  columnShowHideDropdown?: boolean;
+  selectable?: boolean;
+  searching?: boolean;
+  pagination?: boolean;
+  borders?: boolean | Border;
 }
 ```
-<a name="rowContextMenuConfig"/> 
+
 
 ```
+export interface ActionItem {
+  icon: string;
+  action: ActionEnum;
+  title?: string;
+  tooltip?: string;
+  hide?: boolean;
+  permission?: string;
+}
+```
+
+```
+export interface ActionConditionEvent {
+  data: any;
+  action: string;
+}
+```
+
+```
+export interface ColumnStyle {
+  data: any;
+  column: string;
+}
+```
+
+```
+export interface TableActionItem {
+  action: string;
+  row: any;
+}
+```
+
+```
+export interface SelectRowItem {
+  selectedAllRows?: boolean;
+  selectedRowIndexes?: boolean[];
+  selectedRowData?: any;
+}
+```
+
+```
+export interface Border {
+  top?: boolean;
+  right?: boolean;
+  bottom?: boolean;
+  left?: boolean;
+}
+```
+
+```
+
 export interface MenuItem {
   label: string;
   items?: MenuItem[];
   icon?: string;
   disabled?: boolean;
+  class?: string;
   action?: () => void;
+  permission?: string;
 }
 ```
+
